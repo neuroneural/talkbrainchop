@@ -160,10 +160,38 @@
         </section>
       </section>
 
-      <!-- 4. Under the hood -->
+      <!-- 3b. Brainchop CLI -->
       <section>
         <section>
-          <h1>Under the hood</h1>
+          <h1><i class="fas fa-terminal"></i> Brainchop </h1>
+        </section>
+        <section data-background-iframe="https://deep-mi.org/FastSurfer/dev/overview/INSTALL.html"></section>
+        <section>
+          <div style="display: flex; justify-content: center;">
+            <pre style="background: #000; color: #0f0; padding: 15px 25px;
+                border-radius: 8px; font-family: monospace;
+                font-size: 1.2em; text-align: left;">
+      <code>$ pip install brainchop</code>
+    </pre>
+          </div>
+        </section>
+        <section data-vertical-align-top data-background-size="cover" data-background="figures/modern_terminal.png">
+          <h3>Brainchop for the most elegant UI</h3>
+          <img style="border:0; box-shadow: 0px 0px 0px
+                                        rgba(150, 150, 255,
+                                        0.8); margin-top: 1%; margin-left: -120%;" width="40%"
+            class="fragment current-fragment fade-right" src="figures/brainchop_terminal_help.png" alt="terminal help">
+          <img style="border:0; box-shadow: 0px 0px 0px
+                                        rgba(150, 150, 255,
+                                        0.8); margin-left: 30%; margin-top: 1%; margin-right: -120%;" width="40%"
+            class="fragment fade-left" src="figures/docker_logo_old.svg" alt="docker">
+        </section>
+      </section>
+
+      <!-- 4. Core Architecture -->
+      <section>
+        <section>
+          <h1>Core Architecture</h1>
         </section>
 
         <section>
@@ -188,6 +216,52 @@
           </row>
           <div class='slide-footer' style="text-align: left;">
             Fedorov et al. End-to-end learning of brain tissue segmentation from imperfect labeling. IJCNN 2017
+          </div>
+        </section>
+
+        <section data-vertical-align-top>
+          <div id="header-right" style="margin-right: -100px; margin-top: 100px">
+            <img src="figures/Armina.png" alt="Armina Fani"
+              style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 1); margin-bottom: -5%" width="160px">
+            <div style="font-size:10pt;">Armina Fani</div>
+          </div>
+          <h2>Mindgrab</h2>
+          <blockquote style="background-color: #eee8d5; font-size: 70%; margin-top: -10px; width: 70%">
+            Robust Skull Stripping of Any Modality on Any Device
+          </blockquote>
+          <img class="stretch" style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 0.8);" width="150%"
+            src="figures/mindgrab_simplified.png" alt="loop">
+        </section>
+
+        <section data-vertical-align-top>
+          <h2>MINDGRAB (DICE)</h2>
+          <div class="center">
+            <img style="border:0; box-shadow: 0px 10px 10px rgba(150, 150, 150, 0.8);" width="80%"
+              src="figures/dice_mindgrab.png" alt="Mindgrab Dice">
+          </div>
+        </section>
+
+        <section data-vertical-align-top>
+          <h2 style="margin-top:-50px;">MINDGRAB (EFFICIENCY)</h2>
+          <div class="center">
+            <img style="border:0; box-shadow: 0px 10px 10px rgba(150, 150, 150, 0.8); margin-top:-30px;" width="80%"
+              src="figures/speed_mindgrab.png" alt="Mindgrab Efficiency">
+          </div>
+        </section>
+
+        <section>
+          <div id="header-right" style="margin-right: -100px; margin-top: 100px">
+            <img src="figures/AlexFedorovEmory.png" alt="Alex Fedorov"
+              style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 1); margin-bottom: -5%" width="120px">
+            <div style="font-size:10pt;">Alex Fedorov</div>
+          </div>
+          <h3>Stroke Lesion Segmentation</h3>
+          <img class="stretch" style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 0.8);" width="160%"
+            src="figures/pareto_front_winning.png" alt="pareto front">
+          <div class="slide-footer" style="bottom: -45px;">
+            Fedorov, A., et al., 2025. <a
+              href="https://ieeexplore.ieee.org/abstract/document/10981054" target="_blank">State-of-the-Art Stroke
+              Lesion Segmentation at 1/1000th of Parameters.</a> ISBI 2025.
           </div>
         </section>
 
@@ -249,13 +323,13 @@
           <div style="font-size: 32px; text-align: left; width: 80%; margin: 0 auto;">
             <ul>
               <li class="fragment" style="margin-bottom: 20px;">
-                <strong>Native ROCm Training:</strong> Upstream MeshNet into the official <b>MONAI</b> library, trained purely on AMD Instinct/Radeon.
+                <strong>Cloud Training on AMD Instinct MI300X:</strong> Upstream MeshNet into <b>MONAI</b>, trained on AMD Instinct accelerators via ROCm.
               </li>
               <li class="fragment" style="margin-bottom: 20px;">
-                <strong>Local Inference Optimization:</strong> Benchmark brainchop-cli speedups on Ryzen AI against generic CPUs.
+                <strong>Local Inference on Ryzen AI:</strong> Benchmark brainchop-cli speedups on Ryzen AI Max+ against generic CPUs.
               </li>
               <li class="fragment" style="margin-bottom: 20px;">
-                <strong>WebGPU Acceleration:</strong> We're still working on taking maximum advantage of WebGPU on this platform. Profiling current browser inference against AMD WebGPU drivers to define the engineering roadmap.
+                <strong>WebGPU Acceleration:</strong> Still working on taking maximum advantage of WebGPU on this platform. Profiling browser inference against AMD WebGPU drivers to define the roadmap.
               </li>
             </ul>
           </div>
