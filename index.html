@@ -255,6 +255,21 @@
             <h5 style="margin:0;">powered by <b>tinygrad</b></h5>
           </div>
         </section>
+
+        <section>
+          <h2 style="text-transform: none;">The Memory Wall</h2>
+          <div style="font-size: 30px; text-align: left; width: 85%; margin: 0 auto;">
+            <p class="fragment" style="color: #2aa198;">✅ MeshNet: tiny parameters, serial execution, memory footprint = one layer's I/O</p>
+            <p class="fragment" style="color: #dc322f; margin-top: 20px;">❌ But the I/O itself is massive:<br>
+              <span style="margin-left: 40px;">256³ voxels × 21 channels × fp32 ≈ <strong>1.4 GB</strong> for a single activation</span>
+            </p>
+            <p class="fragment" style="color: #dc322f;">❌ More channels → better accuracy → more memory<br>
+              <span style="margin-left: 40px; font-size: 26px;"><em>An accuracy vs. deployability tradeoff</em></span>
+            </p>
+            <p class="fragment" style="color: #dc322f;">❌ Browser WebGL/WebGPU typically caps at 1–4 GB GPU memory</p>
+            <p class="fragment" style="color: #dc322f;">❌ Training requires serious GPU — and the ROCm stack wasn't yet validated for architectures like MeshNet</p>
+          </div>
+        </section>
       </section>
 
       <!-- 5. AMD to the Rescue -->
