@@ -45,39 +45,37 @@
 
 <body>
   <div class="reveal">
-    <!-- In between the <div="reveal"> and the <div class="slides">-->
-    <!-- <header style="position: absolute; top: 10px; left: 100px; z-index: 500; font-size:100px;background-color: rgba(0,0,0,0); text-align: center !important"></header>  -->
-    <!-- In between the <div="reveal"> and the <div class="slides">-->
-    <!-- Any section element inside of this container is displayed as a slide #93a1a1 -->
-    <div class="slides">
+    <!-- In between the <div="reveal"> and the <div class="slides">
+      <!-- 1. Title Slide -->
       <section>
-        <section>
-          <p>
-          <h2 style="color: #000000">Brainchop and zero-footprint AI</h2>
-          <div class="center">
-            <img style="bottom=0; width=100%; box-shadow: 0px 0px 0px
-                                rgba(150, 150, 255,0.8);
-                                border:0;" width="60%" src="figures/TReNDS_logo_light.png" alt="IJCNN team">
-          </div>
-          <div style="color: #000000">
-            Sergey Plis
-          </div>
-          <p>
-            <img style="border:0; box-shadow: 0px 0px 0px;" width="200" src="figures/GSU.png" alt="logo">
-            <img style="border:0; box-shadow: 0px 0px 0px
-                                rgba(150, 150, 255, 0.8);" height="100" src="figures/neuroneural_logo.png"
-              alt="Neuroneural">
-        </section>
+        <p>
+        <h2 style="color: #000000; text-transform: none;">Zero-Footprint Edge Neuroimaging on AMD</h2>
+        <h3 style="color: #555555; text-transform: none;">BrainChop × AMD</h3>
+        <div class="center" style="margin-top: 20px;">
+          <img style="border:0; box-shadow:none; height: 80px; margin: 0 10px;" src="figures/Jack.png" alt="Jack Lo" onerror="this.src='figures/Olaf_Ronneberger_Portrait.jpg'">
+          <img style="border:0; box-shadow:none; height: 80px; margin: 0 10px;" src="figures/Kristof.png" alt="Kristof Denolf" onerror="this.src='figures/Olaf_Ronneberger_Portrait.jpg'">
+          <img style="border:0; box-shadow:none; height: 80px; margin: 0 10px;" src="figures/Gagan.png" alt="Gagandeep Singh" onerror="this.src='figures/Olaf_Ronneberger_Portrait.jpg'">
+          <img style="border:0; box-shadow:none; height: 80px; margin: 0 10px;" src="figures/Mike.png" alt="Mike Doan" onerror="this.src='figures/Olaf_Ronneberger_Portrait.jpg'">
+        </div>
+        <div style="font-size: 16px; margin-top: -10px; color: #555;">
+          Jack Lo &middot; Kristof Denolf &middot; Gagandeep Singh &middot; Mike Doan
+        </div>
+        <div style="color: #000000; margin-top: 20px; font-size: 24px;">
+          Sergey Plis
+        </div>
+        <p style="margin-top: 30px;">
+          <img style="border:0; box-shadow: none;" height="80" src="figures/GSU.png" alt="GSU">
+          <img style="border:0; box-shadow: none; margin: 0 20px;" height="80" src="figures/TReNDS_logo_light.png" alt="TReNDS">
+          <img style="border:0; box-shadow: none;" height="80" src="figures/neuroneural_logo.png" alt="Neuroneural">
+        </p>
       </section>
+
+      <!-- 2. Motivation -->
       <section>
         <section>
           <h1>Motivation</h1>
         </section>
-        <section data-background="figures/automation.jpg" data-vertical-align-top>
-          <h2>The Age of AI</h2>
-          <img class="fragment" src="figures/time_person_of_the_year.jpeg" alt="TIME Person of the Year"
-            style="position: fixed; bottom: 5%; left: 2%; height: 39vh; width: auto; border: 0; box-shadow: 0px 5px 15px rgba(0,0,0,0.5); transform: translate(-30%, 15%);">
-        </section>
+        
         <section>
           <div style="display: flex; justify-content: center; gap: 80px; margin-top: 80px;">
             <div style="text-align: center; min-width: 180px;">
@@ -103,460 +101,175 @@
           <div class="slide-footer">
             Lee, T., Lee, J.H., Yoon, S.H., Park, S.H. and Kim, H., 2025. <a
               href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12350510/" target="_blank">Availability and transparency of
-              artificial
-              intelligence models in radiology: a meta-research study.</a> European Radiology, pp.1-12.
+              artificial intelligence models in radiology: a meta-research study.</a> European Radiology, pp.1-12.
           </div>
         </section>
+
         <section>
-          <row>
-            <col50>
-              <img style="border:0; box-shadow: 0px 10px 10px
-                                    rgba(150, 150, 150,
-                                    0.8);" width="100%" class="fragment zoom-in"
-                src="figures/sharing_models_publications.png" alt="github stars">
-            </col50>
-            <col50>
-              <img style="border:0; box-shadow: 0px 10px 10px
-                                    rgba(150, 150, 150,
-                                    0.8);" width="100%" class="fragment zoom-in" src="figures/nninteractive_readme.png"
-                alt="github stars">
-            </col50>
-          </row>
-          <div class="slide-footer">
-            Lee, T., Lee, J.H., Yoon, S.H., Park, S.H. and Kim, H., 2025. <a
-              href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12350510/" target="_blank">Availability and
-              transparency of artificial
-              intelligence models in radiology: a meta-research study.</a> European Radiology, pp.1-12.
-          </div>
-        </section>
-        <section>
-          <h2>Scaling laws gone awry</h2>
+          <h2>Privacy Matters</h2>
           <row>
             <col50>
               <ul style="font-size: 32px;">
-                <li class="fragment roll-in" data-fragment-index="0"> NVIDIA GPU requirement
-                <li class="fragment roll-in" data-fragment-index="1"> Larger models are always better
-                <li class="fragment roll-in" data-fragment-index="2"> There are plenty of resources in the cloud
-                <li class="fragment roll-in" data-fragment-index="3"> We just need larger cloud/data-center
-                <li class="fragment roll-in" data-fragment-index="4"> And a nuclear reactor to power it (not a joke)
+                <li class="fragment roll-in"> Strict HIPAA / GDPR constraints limit cloud use for clinical data
+                <li class="fragment roll-in"> Patients trust clinics, not third-party cloud servers
+                <li class="fragment roll-in"> Not all data can be easily transferred out of institutional silos
+                <li class="fragment roll-in"> <em>Local deployment is the only way for widespread adoption, but it's often too complex.</em>
               </ul>
             </col50>
             <col50>
-              <img style="border:0; box-shadow: 0px 10px 10px
-                                    rgba(150, 150, 150,
-                                    0.8);" width="100%" class="fragment zoom-in" data-fragment-index="4"
-                src="figures/nuclear_GPU.png" alt="github stars">
+              <img style="border:0; box-shadow: 0px 10px 10px rgba(150, 150, 150, 0.8);" width="100%" src="figures/Richard_Stallman_St.jpg" alt="Richard Stallman">
+              <div style="font-size: 14px; margin-top: -5px; text-align: center;">Richard Stallman, founder of the Free Software Foundation</div>
             </col50>
           </row>
         </section>
-        <section>
-          <h2>Privacy does matter</h2>
-          <row>
-            <col50>
-              <ul style="font-size: 32px;">
-                <li class="fragment roll-in"> Not all data can be transferred to the cloud
-                <li class="fragment roll-in"> For ethical and legal reasons
-                <li class="fragment roll-in"> To protect the trust of the users
-                <li class="fragment roll-in"> For technical or administrative reasons
-                <li class="fragment roll-in"> <em>And even when it is possible obtaining all permissions takes skill and
-                    time</em>
-              </ul>
-            </col50>
-            <col50>
-              <img style="border:0; box-shadow: 0px 10px 10px
-                                    rgba(150, 150, 150,
-                                    0.8);" width="100%" src="figures/Richard_Stallman_St.jpg" alt="Richard Stallman">
-              <div style="font-size: 14px; margin-top: -5px; text-align: center;">Richard Stallman, founder of the Free
-                Software Foundation</div>
-            </col50>
-          </row>
-        </section>
-        <section data-background="figures/sovereignty_transparent.png" data-background-size="cover"
-          data-vertical-align-top>
-          <h2 style="margin-top:-50px">Sovereignty</h2>
-        </section>
-        <section>
 
-          <blockquote style="background-color: #93a1a1; color: #fdf6e3; font-size: 36px; width: 100%;">
-            A good result today is better than a perfect result tomorrow
-          </blockquote>
-        </section>
         <section>
-          <h3>Skill issue</h3>
-          <img style="border:0; box-shadow: 0px 10px 10px
-                                    rgba(150, 150, 150,
-                                    0.8); margin-top: -20px;" width="40%" src="figures/average_familiarity_2x.png"
-            alt="github stars">
-
-
+          <h3 style="text-transform: none;">The "Skill Issue" Paradox</h3>
+          <img style="border:0; box-shadow: 0px 10px 10px rgba(150, 150, 150, 0.8); margin-top: -20px;" width="40%" src="figures/average_familiarity_2x.png" alt="xkcd">
           <div class="slide-footer">
             <a href="https://xkcd.com/2501/" target="_blank">https://xkcd.com/2501/</a>
           </div>
         </section>
-        <section>
-          <h2>Our Goal</h2>
-          <ul>
-            <li class="fragment roll-in"> AI models with top performance for regular users
-            <li class="fragment roll-in"> w/ Minimal (preferably zero) installation burden
-            <li class="fragment roll-in"> Fast, personalized interactive models!
-          </ul>
-        </section>
       </section>
+
+      <!-- 3. BrainChop -->
       <section>
         <section>
-          <h1><a href="https://neuroneural.net/brainchop-test/" target="_blank">Brainchop.org</a></h1>
+          <h1 style="text-transform: none;"><a href="https://neuroneural.net/brainchop-test/" target="_blank">Brainchop.org</a></h1>
         </section>
-        <section data-background-iframe="figures/brainchop13_short.mp4">
-        </section>
-
-        <section data-background="figures/niivue_webpage.png">
-          <div id="header-right" style="margin-right: -100px; margin-top: -300px">
-            <img src="figures/ChrisRorden.png" alt="Chris Rorden"
-              style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 1); margin-bottom: -5%" width="160px">
-            <div style="font-size:10pt;">Chris Rorden</div>
-          </div>
-          <div id="header-left" style="margin-right: -100px; margin-top: -300px">
-            <img src="figures/TaylorHanayik.jpeg" alt="Taylor Hanayik"
-              style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 1); margin-bottom: -5%" width="160px">
-            <div style="font-size:10pt;">Taylor Hanayik</div>
-          </div>
-        </section>
-
+        
         <section data-vertical-align-top
           data-background-video="https://github.com/neuroneural/brainchop/releases/download/v4.1.0/Brainchop_overhaul.mp4"
           data-background-video-loop>
-          <img style="border:0; box-shadow: 0px 10px 10px
-                                    rgba(150, 150, 150,
-                                    0.8);" width="70%" class="fragment zoom-in" src="figures/brainchop_interface.svg"
-            alt="github stars">
-
-          <div class="slide-footer" style="font-size:8pt;">
-            Plis SM, Masoud M, Hu F, Hanayik T, Ghosh SS, Drake C, Newman-Norlund R, Rorden C. Brainchop: Providing an
-            edge ecosystem for deployment of neuroimaging artificial intelligence models. Aperture neuro. <b>2024 Sep
-              5</b>;4:10-52294.
+          <img style="border:0; box-shadow: 0px 10px 10px rgba(150, 150, 150, 0.8);" width="70%" class="fragment zoom-in" src="figures/brainchop_interface.svg" alt="interface">
+          <div class="slide-footer" style="font-size:8pt; background: rgba(255,255,255,0.7); padding: 5px; border-radius: 5px;">
+            Plis SM, et al. Brainchop: Providing an edge ecosystem for deployment of neuroimaging artificial intelligence models. Aperture neuro. <b>2024</b>
           </div>
-        </section>
-
-        <section data-vertical-align-top data-background-size="contain"
-          data-background="figures/brainchop_users_map.png">
-          <h3>Judging adoption by <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
-              class="fas fa-star"></i> <i class="fas fa-star"></i> on <i class="fab fa-github"></i></h3>
-          <img style="border:0; box-shadow: 0px 10px 10px
-                        rgba(100, 100, 100,
-                        0.8); margin-top: 40%; margin-left: 40%;" width="40%" src="figures/brainchop_github_stars.png"
-            alt="github stars">
-
-        </section>
-
-        <section>
-          <a href="https://neuroneural.net/brainchop-test/">brainchop.org</a>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h1><i class="fas fa-terminal"></i> Brainchop </h1>
-        </section>
-        <section data-background-iframe="https://deep-mi.org/FastSurfer/dev/overview/INSTALL.html"></section>
-        <section>
-          <div style="display: flex; justify-content: center;">
-            <pre style="background: #000; color: #0f0; padding: 15px 25px;
-                border-radius: 8px; font-family: monospace;
-                font-size: 1.2em; text-align: left;">
-      <code>$ pip install brainchop</code>
-    </pre>
-          </div>
-        </section>
-        <section data-vertical-align-top data-background-size="cover" data-background="figures/modern_terminal.png">
-          <h3>Brainchop for the most elegant UI</h3>
-          <img style="border:0; box-shadow: 0px 0px 0px
-                                        rgba(150, 150, 255,
-                                        0.8); margin-top: 1%; margin-left: -120%;" width="40%"
-            class="fragment current-fragment fade-right" src="figures/brainchop_terminal_help.png" alt="github stars">
-          <img style="border:0; box-shadow: 0px 0px 0px
-                                        rgba(150, 150, 255,
-                                        0.8); margin-left: 30%; margin-top: 1%; margin-right: -120%;" width="40%"
-            class="fragment fade-left" src="figures/docker_logo_old.svg" alt="github stars">
-        </section>
-      </section>
-      <section>
-        <section>
-          <h1>Under the hood</h1>
-        </section>
-        <section>
-          <h3>pip install mindfultensors</h3>
-
-          <img style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 1); margin-top: 0px" width="100%"
-            src="figures/mongodb_logo.png" alt="mongo">
-        </section>
-
-        <section>
-          <img style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 1); margin-top: -100px" width="100%"
-            src="figures/Synth_generation_overview.png" alt="Synth Generation">
-          <div class='slide-footer'>
-            SynthSeg: Segmentation of brain MRI scans of any contrast and resolution without retraining
-            B. Billot, D.N. Greve, O. Puonti, A. Thielscher, K. Van Leemput, B. Fischl, A.V. Dalca, J.E. Iglesias
-            Medical Image Analysis (2023)
-            <a href="https://github.com/BBillot/SynthSeg">SynthSeg github</a>
-          </div>
-        </section>
-
-        <section>
-          <h2>SynthStrip</h2>
-          <img style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 1);" width="120%"
-            src="figures/SynthStrip_example.png" alt="Synth Strip Example">
-          <div class='slide-footer'>
-            SynthStrip: Skull-Stripping for Any Brain Image
-            Andrew Hoopes, Jocelyn S. Mora, Adrian V. Dalca, Bruce Fischl, Malte Hoffmann NeuroImage 260, 2022, 119474
-            https://doi.org/10.1016/j.neuroimage.2022.119474
-            <a href="https://surfer.nmr.mgh.harvard.edu/docs/synthstrip/">SynthStrip page</a>
-          </div>
-        </section>
-
-        <section>
-          <h2>The Catch: Training takes a week</h2>
-          GPU utilization
-          <img style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 1);" width="100%"
-            src="figures/SynthSeg_utilization.png" alt="synthseg training">
-        </section>
-
-        <section>
-          <h2>Decouple training and generation</h2>
-          <img style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 1);" width="60%"
-            src="figures/differential_wirehead.gif" alt="differential">
-        </section>
-
-        <section>
-          <div id="header-right" style="margin-right: -100px; margin-top: -20px">
-            <img src="figures/Mike.png" alt="Mike Doan"
-              style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 1); margin-bottom: -5%" width="160px">
-            <div style="font-size:10pt;">Mike Doan</div>
-          </div>
-
-          <h3>really Decouple training and generation</h3>
-          <img style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 1); margin-top: -50px;" width="100%"
-            src="figures/wirehead_poster.png" alt="wirehead">
-        </section>
-
-        <section data-fullscreen>
-          <div id="header-left" style="margin-top: 100px; margin-left: 50px;">
-            <img style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 1); " width="130"
-              src="figures/Olaf_Ronneberger_Portrait.jpg" alt="Ronneberger">
-            <div style="font-size:14pt;">Olaf Ronneberger</div>
-          </div>
-          <h2>One U-shaped Network</h2>
-          <h1 class="fragment roll-in">U-Net</h1>
-          <img width="70%" style="margin-top: -260px;" src="figures/V-Net.png" alt="final model">
-          <div class="slide-footer" style="margin-left: 200px;">
-            <a href="https://arxiv.org/abs/1505.04597" target="_blank">
-              Ronneberger et al. U-net: Convolutional networks for biomedical image segmentation. MICCAI 2015
-            </a><br>
-            <a href="https://arxiv.org/abs/1606.06650" target="_blank">
-              Çiçek et al. 3D U-Net: learning dense volumetric segmentation from sparse annotation. MICCAI 2016
-            </a>
-          </div>
-        </section>
-
-
-        <section data-background="figures/unet_takeover.png" data-background-size="contain" data-vertical-align-top>
-          <h2 style="margin-top: -30px; margin-left: -350px;">U-Net took over the world</h2>
-        </section>
-
-        <section>
-          <h1>But there is a problem</h1>
-          parameters and memory usage
-        </section>
-
-        <section data-fullscreen>
-          <h2>Consider a small U-net</h2>
-          <row>
-            <col50>
-              <img class="fragment roll-in" class="stretch" style="border:0; box-shadow: 0px 0px 0px
-                                                rgba(150, 150, 255, 0.8);" width="100%" src="figures/unet_arc.png"
-                alt="small U-Net">
-            </col50>
-            <col50>
-              <img class="fragment roll-in" class="stretch" style="border:0; box-shadow: 0px 0px 0px
-                                                    rgba(150, 150, 255, 0.8);" width="100%"
-                src="figures/unet_table.png" alt="U-Net parameter table">
-            </col50>
-          </row>
-
-          <div class='slide-footer'>
-            Ronneberger et al. U-net: Convolutional networks
-            for biomedical image segmentation. MICCAI 2015<br>
-            Çiçek et al. 3D U-Net: learning dense volumetric
-            segmentation from sparse annotation. MICCAI 2016
-          </div>
-        </section>
-
-        <section data-fullscreen>
-          <h2>Skip-connections need memory</h2>
-          <img width="70%" style="margin-top: -70px;" src="figures/V-Net.png" alt="final model">
-        </section>
-
-        <section data-fullscreen>
-          <h2>We could train on subcubes</h2>
-          <img width="70%" style="margin-top: -70px;" src="figures/subvolume_prediction_pipeline.png" alt="final model">
-        </section>
-
-        <section>
-          <h4>Full volume training and inference gives better accuracy</h4>
-          <h4>but requires 80Gb GPU for training and more than 10Gb for inference</h4>
-          <div class="slide-footer">
-            Li, Y., Cui, J., Sheng, Y., Liang, X., Wang, J., Chang, E.I.C. and Xu, Y., 2021. Whole brain segmentation
-            with full volume neural network. Computerized Medical Imaging and Graphics, 93, p.101991.</h5></br>
-            Dorfner, F.J., Patel, J.B., Kalpathy-Cramer, J., Gerstner, E.R. and Bridge, C.P., 2025. A review of deep
-            learning for brain tumor analysis in MRI. NPJ Precision Oncology, 9(1), p.2.
-          </div>
-        </section>
-
-        <section>
-          <div id="header-left" style="margin-left: -200px; z-index: 1500;">
-            <img width="200px" style="margin-bottom: -5%;" src="figures/AlexFedorov.jpg" alt="Alex"><br>
-            <small>Alex Fedorov</small>
-          </div>
-          <h2>MeshNet</h2>
-          <row>
-            <col40>
-              <img class="fragment roll-in" class="stretch" style="border:0; box-shadow: 0px 0px 0px
-                                                rgba(150, 150, 255, 0.8);" width="100%" src="figures/meshnet_arch.png"
-                alt="MeshNet">
-            </col40>
-            <col60>
-              <img class="fragment roll-in" class="stretch" style="border:0; box-shadow: 0px 0px 0px
-                                                    rgba(150, 150, 255, 0.8);" width="100%" src="figures/mntable.png"
-                alt="MeshNet parameter table">
-              <ul style="font-size:30px;">
-                <li class="fragment roll-in">72516 vs 23523355 U-Net parameters
-                <li class="fragment roll-in">but that's for 21 channel MeshNet
-                <li class="fragment roll-in">5 channel MeshNet is about 4x smaller
-              </ul>
-            </col60>
-          </row>
-          <div class='slide-footer' style="text-align: left;">
-            Fedorov et al. End-to-end learning of brain tissue segmentation
-            from imperfect labeling. IJCNN 2017
-          </div>
-        </section>
-        <section>
-          <h1>other Applications</h1>
-        </section>
-        <section data-vertical-align-top>
-          <div id="header-right" style="margin-right: -100px; margin-top: 100px">
-            <img src="figures/Armina.png" alt="Armina Fani"
-              style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 1); margin-bottom: -5%" width="160px">
-            <div style="font-size:10pt;">Armina Fani</div>
-          </div>
-
-          <h2>Mindgrab</h2>
-          <blockquote style="background-color: #eee8d5; font-size: 70%; margin-top: -10px; width: 70%">
-            Robust Skull Stripping of Any Modality on Any Device
-          </blockquote>
-          <img class="stretch" style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 0.8);" width="150%"
-            src="figures/mindgrab_simplified.png" alt="loop">
-        </section>
-
-        <section data-vertical-align-top>
-          <h2>MINDGRAB (DICE-DIVE)</h2>
-          <div class="center">
-            <img style="border:0; box-shadow: 0px 10px 10px rgba(150, 150, 150, 0.8);" width="80%"
-              src="figures/dice_mindgrab.png" alt="Mindgrab Dice">
-          </div>
-        </section>
-
-        <section data-vertical-align-top>
-          <h2 style="margin-top:-50px;">MINDGRAB (EFFICIENCY)</h2>
-          <div class="center">
-            <img style="border:0; box-shadow: 0px 10px 10px rgba(150, 150, 150, 0.8); margin-top:-30px;" width="80%"
-              src="figures/speed_mindgrab.png" alt="Mindgrab Efficiency">
-          </div>
-        </section>
-
-        <section data-vertical-align-top>
-          <h2 style="margin-top:-50px;">MINDGRAB (PERFORMANCE)</h2>
-          <div style="display: flex; justify-content: center; gap: 20px; align-items: center; margin-top:-30px;">
-            <img class="fragment"
-              style="border:0; box-shadow: 0px 10px 10px rgba(150, 150, 150, 0.8); height: 550px; width: auto;"
-              src="figures/contours_mindgrab.png" alt="Mindgrab Contours">
-            <img class="fragment"
-              style="border:0; box-shadow: 0px 10px 10px rgba(150, 150, 150, 0.8); height: 550px; width: auto;"
-              src="figures/errors_mindgrab.png" alt="Mindgrab Errors">
-          </div>
-        </section>
-
-        <section>
-          <div id="header-right" style="margin-right: -100px; margin-top: 100px">
-            <img src="figures/AlexFedorovEmory.png" alt="Alex Fedorov"
-              style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 1); margin-bottom: -5%" width="120px">
-            <div style="font-size:10pt;">Alex Fedorov</div>
-          </div>
-          <h3>Tumor Detection</h3>
-          <img class="stretch" style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 0.8);" width="160%"
-            src="figures/pareto_front_winning.png" alt="loop">
-          <div class="slide-footer" style="bottom: -45px;">
-            Fedorov, A., Bu, Y., Hu, X., Rorden, C. and Plis, S., 2025, April. <a
-              href="https://ieeexplore.ieee.org/abstract/document/10981054" target="_blank">State-of-the-Art Stroke
-              Lesion Segmentation at 1/1000th of Parameters.</a> In 2025 IEEE 22nd International Symposium on Biomedical
-            Imaging (ISBI) (pp. 1-5). IEEE.
-          </div>
-        </section>
-
-        <section>
-          <h1><a href="https://brain2print.org/" target="_blank">brain2print</a></h1>
-        </section>
-
-        <section data-background-video="figures/brains2print.mp4" data-background-video-loop>
-        </section>
-
-        <section>
-          <h3>Other models (<a href="https://neuroneural.net/brainchop-test/" target="_blank">possibly</a>)?</h3>
-        </section>
-        <section>
-          <h4>The browser is not forgiving, but MeshNet is easy to train</h4>
-        </section>
-
-        <section data-vertical-align-top data-background="figures/tinygrad_page.png">
-          <h3>pip install brainchop is much simpler though</h3>
-          <h5>powered by</h5>
-        </section>
-      </section>
-      <section>
-        <section>
-          <h1>The Future</h1>
-        </section>
-        <section>
-          <h3>Faster personal devices, faster software</h3>
-          <blockquote style="background-color: #eee8d5; font-size: 70%; margin-top: -10px; width: 70%">
-            Personal devices are becoming much more powerful.
-            <ul>
-              <li> This means current problems get solved faster.
-              <li> It also means complex "cloud" tasks are moving to the device itself.
-              <li> <b>Goal</b>: We need to have the tools ready for users to take advantage of this shift.
-            </ul>
-          </blockquote>
-        </section>
-        <section>
-          <h4>software is also becoming better: the upcoming WebGPU standard</h4>
-        </section>
-        <section data-vertical-align-top data-background-iframe="https://neuroneural.net/brainchop-test/"
-          data-background-interactive>
-          <h3 style="text-shadow: 4px 4px 4px #002b36; color: #93a1a1">upcoming WebGPU</h3>
         </section>
 
         <section data-vertical-align-top data-background-iframe="https://neuroneural.net/brainchop-test/"
           data-background-interactive>
           <h3 style="text-shadow: 4px 4px 4px #002b36; color: #93a1a1">Interactive demo</h3>
-          <div class='slide-footer'>
-            <a href="https://neuroneural.net/brainchop-test/">brainchop.org</a><br>
-            <a href="https://github.com/neuroneural/brainchop">https://github.com/neuroneural/brainchop <i
-                class="fab fa-github"></i></a>
+        </section>
+
+        <section data-vertical-align-top data-background-size="contain"
+          data-background="figures/brainchop_users_map.png">
+          <h3>Judging adoption by <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> on <i class="fab fa-github"></i></h3>
+          <img style="border:0; box-shadow: 0px 10px 10px rgba(100, 100, 100, 0.8); margin-top: 40%; margin-left: 40%;" width="40%" src="figures/brainchop_github_stars.png" alt="github stars">
+        </section>
+      </section>
+
+      <!-- 4. Under the hood -->
+      <section>
+        <section>
+          <h1>Under the hood</h1>
+        </section>
+
+        <section>
+          <h2>MeshNet</h2>
+          <row>
+            <col40>
+              <img class="stretch" style="border:0; box-shadow: 0px 0px 0px rgba(150, 150, 255, 0.8);" width="100%" src="figures/meshnet_arch.png" alt="MeshNet">
+            </col40>
+            <col60>
+              <ul style="font-size:32px;">
+                <li class="fragment roll-in">Tiny parameter count (~72K vs millions in U-Net)
+                <li class="fragment roll-in">Allows full-volume 3D inference (no subcubing)
+                <li class="fragment roll-in">Perfect for browser deployment (WebAssembly / WebGL / WebGPU)
+                <li class="fragment roll-in" style="margin-top: 20px;"><strong>Applications:</strong></li>
+                <ul class="fragment roll-in">
+                  <li>MindGrab: Robust Skull Stripping</li>
+                  <li>Stroke Lesion Segmentation (Pareto front)</li>
+                  <li>Brain2Print generation</li>
+                </ul>
+              </ul>
+            </col60>
+          </row>
+          <div class='slide-footer' style="text-align: left;">
+            Fedorov et al. End-to-end learning of brain tissue segmentation from imperfect labeling. IJCNN 2017
+          </div>
+        </section>
+
+        <section data-vertical-align-top data-background="figures/tinygrad_page.png">
+          <div style="background: rgba(255,255,255,0.8); padding: 20px; border-radius: 10px; display: inline-block; margin-top: 50px;">
+            <h3 style="text-transform: none; margin:0;">pip install brainchop</h3>
+            <h5 style="margin:0;">powered by <b>tinygrad</b></h5>
           </div>
         </section>
       </section>
+
+      <!-- 5. AMD to the Rescue -->
       <section>
-        <h1>thank you!</h1>
+        <section>
+          <h1>AMD to the Rescue</h1>
+        </section>
+
+        <section>
+          <h2 style="text-transform: none;">Ryzen AI Max+ 395</h2>
+          <div style="font-size: 30px; text-align: left; width: 80%; margin: 0 auto;">
+            <p><strong>The "Unified Memory" Necessity</strong></p>
+            <ul>
+              <li class="fragment"><strong>Processor:</strong> 16-Core / 32-Thread</li>
+              <li class="fragment"><strong>GPU:</strong> Radeon™ 8060S (14,800 GFLOP/s fp32, 256 GB/s BW)</li>
+              <li class="fragment"><strong>Memory:</strong> 128GB LPDDR5x-8000 Unified Memory</li>
+            </ul>
+            <p class="fragment" style="margin-top: 30px; padding: 20px; background: #eee8d5; border-radius: 10px; font-size: 26px;">
+              <strong>The Capacity Advantage:</strong> By allocating ~96GB+ of system RAM as VRAM, we can load and train massive 3D volumetric models (MeshNet) that exceed the 80GB VRAM limit of standard enterprise GPUs.
+            </p>
+            <p class="fragment" style="margin-top: 10px; font-size: 26px;">
+              All in a 4.5L Framework Desktop — clinician-grade local AI, directly on hospital desks.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h3 style="text-transform: none;">Roofline &mdash; OpenCL Backend</h3>
+          <img src="figures/roofline_advanced_micro_devices_inc_amd_ati_strix_halo_ra_legend.png" style="max-height: 500px; border: 0; box-shadow: 0px 5px 15px rgba(0,0,0,0.3);" alt="OpenCL Roofline">
+          <p style="font-size: 24px;">Baseline characterization via OpenCL tinygrad backend on Radeon 8060S</p>
+        </section>
+
+        <section>
+          <h3 style="text-transform: none;">Roofline &mdash; ROCm Backend</h3>
+          <img src="figures/roofline_advanced_micro_devices_inc_amd_ati_strix_halo_ra.png" style="max-height: 500px; border: 0; box-shadow: 0px 5px 15px rgba(0,0,0,0.3);" alt="ROCm Roofline">
+          <p style="font-size: 24px;">Early ROCm backend results</p>
+        </section>
+
+        <section>
+          <h3 style="text-transform: none;">OpenCL vs ROCm Comparison</h3>
+          <!-- Placeholder for combined image, I will use a placeholder or the actual filename if the user provides it later. We'll use a placeholder string for now. -->
+          <div style="font-size: 24px; color: #555; padding: 100px; border: 2px dashed #999; margin: 20px auto; width: 60%;">
+            [Combined OpenCL vs ROCm Roofline Plot goes here]<br><br>
+            <i>ROCm improvements are visible, but headroom remains.</i>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="text-transform: none;">The Path Forward</h2>
+          <div style="font-size: 32px; text-align: left; width: 80%; margin: 0 auto;">
+            <ul>
+              <li class="fragment" style="margin-bottom: 20px;">
+                <strong>Native ROCm Training:</strong> Upstream MeshNet into the official <b>MONAI</b> library, trained purely on AMD Instinct/Radeon.
+              </li>
+              <li class="fragment" style="margin-bottom: 20px;">
+                <strong>Local Inference Optimization:</strong> Benchmark brainchop-cli speedups on Ryzen AI against generic CPUs.
+              </li>
+              <li class="fragment" style="margin-bottom: 20px;">
+                <strong>WebGPU Acceleration:</strong> We're still working on taking maximum advantage of WebGPU on this platform. Profiling current browser inference against AMD WebGPU drivers to define the engineering roadmap.
+              </li>
+            </ul>
+          </div>
+        </section>
       </section>
-    </div>
+
+      <!-- 6. Thank you -->
+      <section>
+        <h1 style="text-transform: none;">Thank You!</h1>
+        <div style="font-size: 30px; margin-top: 40px;">
+          <p><a href="https://brainchop.org" target="_blank">brainchop.org</a></p>
+          <p><a href="https://github.com/neuroneural/brainchop" target="_blank">github.com/neuroneural/brainchop</a></p>
+        </div>
+      </section>
+</div>
 
   </div>
 
